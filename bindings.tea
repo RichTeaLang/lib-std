@@ -1,0 +1,66 @@
+Bindings({
+	Function("For" functionClass:"uk.co.richwalton.richtea.stdlib.For" implicitAttributeName:"count" implicitBranchName:"do" {
+		Attribute("count");
+		Attribute("as" defaultValue:"i");
+	})
+	
+	Function("ForEach" functionClass:"uk.co.richwalton.richtea.stdlib.ForEach" implicitAttributeName:"as" implicitBranchName:"do" {
+		Attribute("in");
+		Attribute("as" defaultValue:"i");
+	})
+	
+	Function("ForEachAttribute" functionClass:"uk.co.richwalton.richtea.stdlib.ForEachAttribute" implicitAttributeName:"as" implicitBranchName:"do" {
+		Attribute("in");
+		Attribute("as" defaultValue:"i");
+	})
+	
+	Function("If" functionClass:"uk.co.richwalton.richtea.stdlib.If" implicitAttributeName:"expression" implicitBranchName:"then" {
+		Attribute("expression");
+		Branch("then");
+		Branch("else");
+	})
+	
+	Function("Increment" functionClass:"uk.co.richwalton.richtea.stdlib.Increment" implicitAttributeName:"attribute" {
+		Attribute("attribute")
+		Attribute("by" defaultValue:1)
+	})
+	
+	Function("Let" functionClass:"uk.co.richwalton.richtea.stdlib.Let" implicitAttributeName:"var" {
+		Attribute("variableName");
+		Attribute("be");
+	})
+		
+	Function("Man" functionClass:"uk.co.richwalton.richtea.stdlib.Man" implicitAttributeName: "target" {
+		Attribute("target")
+	})
+	
+	Function("Map" functionClass:"uk.co.richwalton.richtea.stdlib.Map" implicitAttributeName:"input" implicitBranchName:"mapFunction" {
+		Attribute("input")
+		Branch("mapFunction");
+	})
+	
+	Function("Print" functionClass:"uk.co.richwalton.richtea.stdlib.Print" implicitAttributeName:"message" {
+		Attribute("message", defaultValue:"");
+		Attribute("prependNewLine" defaultValue:false);
+		Attribute("appendNewLine" defaultValue:true);
+	})
+		
+	Function("Return" functionClass:"uk.co.richwalton.richtea.stdlib.Return" implicitAttributeName:"value" {
+		Attribute(name:"value")
+	})
+	
+	Function("Set" functionClass:"uk.co.richwalton.richtea.stdlib.Set" implicitAttributeName:"attribute" { 
+		Attribute("attribute");
+		Attribute("to");
+	})
+		
+	Function("Switch" functionClass:"uk.co.richwalton.richtea.stdlib.Switch" implicitAttributeName:"value")
+	
+	Function("SystemExit" functionClass:"uk.co.richwalton.richtea.stdlib.SystemExit" implicitAttributeName:"code" {
+		Attribute("code" defaultValue:0)
+	})
+	
+	Function("While" functionClass:"uk.co.richwalton.richtea.stdlib.While" implicitAttributeName:"condition" implicitBranchName:"do" {
+		Attribute("condition")
+	})
+})
