@@ -1,6 +1,6 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.core.execution.AbstractFunction;
+import richTea.runtime.execution.AbstractFunction;
 
 public class While extends AbstractFunction {
 	

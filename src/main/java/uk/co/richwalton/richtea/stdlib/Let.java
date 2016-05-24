@@ -1,8 +1,8 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.core.attribute.PrimativeAttribute;
-import richTea.core.execution.AbstractFunction;
-import richTea.core.execution.VariableScope;
+import richTea.runtime.attribute.PrimativeAttribute;
+import richTea.runtime.execution.AbstractFunction;
+import richTea.runtime.execution.VariableScope;
 
 public class Let extends AbstractFunction {
 

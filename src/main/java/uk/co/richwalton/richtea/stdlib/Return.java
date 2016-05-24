@@ -1,7 +1,7 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.core.execution.AbstractFunction;
-import richTea.core.execution.ReturnException;
+import richTea.runtime.execution.AbstractFunction;
+import richTea.runtime.execution.ReturnException;
 
 public class Return extends AbstractFunction {
 

@@ -1,15 +1,15 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.core.attribute.Attribute;
-import richTea.core.execution.AbstractFunction;
-import richTea.core.factory.bindings.Binding;
-import richTea.core.node.TreeNode;
+import richTea.compiler.bootstrap.BindingNode;
+import richTea.runtime.attribute.Attribute;
+import richTea.runtime.execution.AbstractFunction;
+import richTea.runtime.node.TreeNode;
 
 public class Man extends AbstractFunction {
 
 	@Override
 	protected void run() throws Exception {
-		Binding binding = getTarget();
+		BindingNode binding = getTarget();
 		
 		String doc = binding.getName() + " (" + binding.getFunctionClassName() + ")";
 		
@@ -29,9 +29,9 @@ public class Man extends AbstractFunction {
 		context.setLastReturnValue(doc);
 	}
 	
-	public Binding getTarget() {
+	public BindingNode getTarget() {
 		TreeNode node = (TreeNode) context.getValue("target");
 		
-		return node instanceof Binding ? (Binding) node : node.getBinding();
+		return node instanceof BindingNode ? (BindingNode) node : node.getBinding();
 	}
 }

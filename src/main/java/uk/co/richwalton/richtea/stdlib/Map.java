@@ -3,8 +3,8 @@ package uk.co.richwalton.richtea.stdlib;
 import java.util.ArrayList;
 import java.util.List;
 
-import richTea.core.execution.AbstractFunction;
-import richTea.core.execution.ReturnException;
+import richTea.runtime.execution.AbstractFunction;
+import richTea.runtime.execution.ReturnException;
 
 public class Map extends AbstractFunction {
 
@@ -22,7 +22,6 @@ public class Map extends AbstractFunction {
 				context.unRollScopeTo(this);
 			}
 			
-			
 			mappedValues.add(context.getLastReturnValue());
 		}
 		
@@ -32,5 +31,4 @@ public class Map extends AbstractFunction {
 	protected List<?> getInput() {
 		return (List<?>) context.getValue("input");
 	}
-
 }

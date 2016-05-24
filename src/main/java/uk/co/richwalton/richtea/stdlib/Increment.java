@@ -1,8 +1,8 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.core.attribute.Attribute;
-import richTea.core.attribute.modifier.IncrementModifier;
-import richTea.core.execution.AbstractFunction;
+import richTea.runtime.attribute.Attribute;
+import richTea.runtime.attribute.modifier.IncrementModifier;
+import richTea.runtime.execution.AbstractFunction;
 
 public class Increment extends AbstractFunction {
 

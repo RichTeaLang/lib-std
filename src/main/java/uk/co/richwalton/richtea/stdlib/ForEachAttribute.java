@@ -2,8 +2,8 @@ package uk.co.richwalton.richtea.stdlib;
 
 import java.util.Arrays;
 
-import richTea.core.attribute.Attribute;
-import richTea.core.attribute.AttributeSet;
+import richTea.runtime.attribute.Attribute;
+import richTea.runtime.attribute.AttributeSet;
 
 public class ForEachAttribute extends ForEach {
 	

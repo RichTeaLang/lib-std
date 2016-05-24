@@ -1,8 +1,8 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.core.attribute.Attribute;
-import richTea.core.attribute.modifier.SetModifier;
-import richTea.core.execution.AbstractFunction;
+import richTea.runtime.attribute.Attribute;
+import richTea.runtime.attribute.modifier.SetModifier;
+import richTea.runtime.execution.AbstractFunction;
 
 public class Set extends AbstractFunction {
 	

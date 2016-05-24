@@ -1,0 +1,45 @@
+plugins {
+    id "com.jfrog.bintray" version "1.6"
+}
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+bintray {
+	user = 'richard-walton'
+	key = '6c0c26e5209033f72ac38a18f4b12ce82f9cf1a7'
+	
+	pkg {
+		repo = 'RichTea'
+		name = 'stdlib'
+		licenses = ['MIT']
+		vcsUrl = 'git@github.com:RichTeaLang/stdlib.git'
+		publications = ['dist']
+		
+		version {
+			name = 'DevSnapshot'
+		}
+	}
+}
+
+publishing {
+    publications {
+        dist(MavenPublication) {
+            from components.java
+            groupId 'uk.co.richwalton'
+            artifactId 'richtea-stdlib'
+            version '0.0.1'
+        }
+    }
+}
+repositories {
+    jcenter()
+    maven {
+        url 'https://dl.bintray.com/richard-walton/maven/'
+    }
+}
+
+dependencies {
+    compile 'uk.co.richwalton:richtea:0.0.1'
+}
+
