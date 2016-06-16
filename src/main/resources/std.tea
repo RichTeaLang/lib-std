@@ -56,7 +56,9 @@ Bindings({
 	Function("SystemExit" functionClass:"uk.co.richwalton.richtea.stdlib.SystemExit" implicitAttributeName:"code" {
 		Attribute("code" defaultValue:0)
 	})
-
+	
+	Function("Timer" functionClass:"uk.co.richwalton.richtea.stdlib.Timer" implicitBranchName:"block")
+	
 	Function("While" functionClass:"uk.co.richwalton.richtea.stdlib.While" implicitAttributeName:"condition" implicitBranchName:"do" {
 		Attribute("condition")
 	})
