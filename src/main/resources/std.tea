@@ -25,10 +25,7 @@ Bindings({
 		Attribute("by" defaultValue:1)
 	})
 	
-	Function("Let" functionClass:"uk.co.richwalton.richtea.stdlib.Let" implicitAttributeName:"var" {
-		Attribute("variableName");
-		Attribute("be");
-	})
+	Function("Let" functionClass:"uk.co.richwalton.richtea.stdlib.Let")
 		
 	Function("Man" functionClass:"uk.co.richwalton.richtea.stdlib.Man" implicitAttributeName: "target" {
 		Attribute("target")
@@ -59,7 +56,7 @@ Bindings({
 	Function("SystemExit" functionClass:"uk.co.richwalton.richtea.stdlib.SystemExit" implicitAttributeName:"code" {
 		Attribute("code" defaultValue:0)
 	})
-	
+
 	Function("While" functionClass:"uk.co.richwalton.richtea.stdlib.While" implicitAttributeName:"condition" implicitBranchName:"do" {
 		Attribute("condition")
 	})
