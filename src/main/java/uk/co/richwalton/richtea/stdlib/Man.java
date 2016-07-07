@@ -1,6 +1,7 @@
 package uk.co.richwalton.richtea.stdlib;
 
-import richTea.compiler.bootstrap.BindingNode;
+import richTea.compiler.bootstrap.Binding;
+import richTea.compiler.bootstrap.BindingDefinition;
 import richTea.runtime.attribute.Attribute;
 import richTea.runtime.execution.AbstractFunction;
 import richTea.runtime.node.TreeNode;
@@ -9,19 +10,20 @@ public class Man extends AbstractFunction {
 
 	@Override
 	protected void run() throws Exception {
-		BindingNode binding = getTarget();
+		Binding binding = getTarget();
+		BindingDefinition definition = binding.getDefinition();
 		
-		String doc = binding.getName() + " (" + binding.getFunctionClassName() + ")";
+		String doc = binding.getName() + " (" + binding.getFunctionClass().getName() + ")";
 		
-		doc += "\n\tImplicit attribute name: " + binding.getImplicitAttributeName();
-		doc += "\n\tImplicit branch name: " + binding.getImplicitBranchName();
+		doc += "\n\tImplicit attribute name: " + definition.getImplicitAttributeName();
+		doc += "\n\tImplicit branch name: " + definition.getImplicitBranchName();
 		
-		Attribute[] attributes = binding.getDefaultAttributes().getAttributes();
+		Attribute[] attributes = definition.getDefaultAttributes().getAttributes();
 		
 		if (attributes.length > 0) {
 			doc += "\n\tAttributes:";
 			
-			for(Attribute attribute : binding.getDefaultAttributes().getAttributes()) {
+			for(Attribute attribute : definition.getDefaultAttributes().getAttributes()) {
 				doc += "\n\t\t" + attribute.getName() + " (Default value: " + attribute.getValue(context) + ")";
 			}
 		}
@@ -29,9 +31,9 @@ public class Man extends AbstractFunction {
 		context.setLastReturnValue(doc);
 	}
 	
-	public BindingNode getTarget() {
+	public Binding getTarget() {
 		TreeNode node = (TreeNode) context.getValue("target");
 		
-		return node instanceof BindingNode ? (BindingNode) node : node.getBinding();
+		return node.getBinding();
 	}
 }

@@ -1,10 +1,10 @@
 package uk.co.richwalton.richtea.stdlib;
 
 import richTea.runtime.attribute.AbstractAttribute;
+import richTea.runtime.attribute.AttributeSet;
 import richTea.runtime.attribute.PrimativeAttribute;
 import richTea.runtime.execution.AbstractFunction;
 import richTea.runtime.execution.ExecutionContext;
-import richTea.runtime.execution.VariableScope;
 
 public class Timer extends AbstractFunction {
 	
@@ -12,14 +12,14 @@ public class Timer extends AbstractFunction {
 	protected void run() throws Exception {
 		long currentTime = System.currentTimeMillis();
 		
-		VariableScope scope = context.createScope(
+		AttributeSet returns = new AttributeSet(
 			new PrimativeAttribute("timeStarted", currentTime),
 			new PrimativeAttribute("elapsedTime", new ElapsedTimeAttribute("elapsedTime", currentTime)),
 			new PrimativeAttribute("currentTime", currentTime)
 		);
 		
-		context.executeBranch("block", scope);
-		context.setLastReturnValue(scope);
+		context.executeBranch("block", returns.getAttributes());
+		context.setLastReturnValue(returns);
 	}
 }
 

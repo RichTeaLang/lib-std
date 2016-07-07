@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import richTea.compiler.bootstrap.BindingNode;
+import richTea.compiler.bootstrap.Binding;
 import richTea.runtime.attribute.Attribute;
 import richTea.runtime.attribute.PrimativeAttribute;
 import richTea.runtime.execution.AbstractFunction;
@@ -37,7 +37,8 @@ public class Let extends AbstractFunction {
 				attributes.put(branchName, new PrimativeAttribute(branchName, context.getLastReturnValue()));
 			}
 			
-			BindingNode binding = currentNode.getBinding();
+			Binding binding = currentNode.getBinding();
+			Attribute[] defaultAttributes = binding.getDefinition().getDefaultAttributes().getAttributes();
 			
 			for(Attribute attribute : currentNode.getAttributes()) {
 				String attributeName = attribute.getName();
@@ -51,7 +52,7 @@ public class Let extends AbstractFunction {
 			}
 			
 			// Binding default attributes will be set only if an attribute/branch was not present with same name
-			for(Attribute attribute : binding.getDefaultAttributes().getAttributes()) {
+			for(Attribute attribute : defaultAttributes) {
 				String attributeName = attribute.getName();
 				
 				if (!attributes.containsKey(attributeName)) {
