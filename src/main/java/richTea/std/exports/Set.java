@@ -1,4 +1,4 @@
-package uk.co.richwalton.richtea.stdlib;
+package richTea.std.exports;
 
 import richTea.runtime.attribute.Attribute;
 import richTea.runtime.attribute.modifier.SetModifier;

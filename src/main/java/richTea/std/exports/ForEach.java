@@ -1,4 +1,4 @@
-package uk.co.richwalton.richtea.stdlib;
+package richTea.std.exports;
 
 import richTea.runtime.attribute.PrimativeAttribute;
 import richTea.runtime.execution.AbstractFunction;

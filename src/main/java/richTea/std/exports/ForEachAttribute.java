@@ -1,4 +1,4 @@
-package uk.co.richwalton.richtea.stdlib;
+package richTea.std.exports;
 
 import java.util.Arrays;
 
