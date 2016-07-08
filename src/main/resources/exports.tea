@@ -1,4 +1,4 @@
-Bindings({
+(exports:{
 	Function("For" functionClass:"uk.co.richwalton.richtea.stdlib.For" implicitAttributeName:"count" implicitBranchName:"do" {
 		Attribute("count");
 		Attribute("as" defaultValue:"i");
@@ -40,10 +40,6 @@ Bindings({
 		Attribute("message", defaultValue:"");
 		Attribute("prependNewLine" defaultValue:false);
 		Attribute("appendNewLine" defaultValue:true);
-	})
-		
-	Function("Return" functionClass:"uk.co.richwalton.richtea.stdlib.Return" implicitAttributeName:"value" {
-		Attribute(name:"value")
 	})
 	
 	Function("Set" functionClass:"uk.co.richwalton.richtea.stdlib.Set" implicitAttributeName:"attribute" { 
