@@ -1,67 +1,67 @@
-(exports:{
-	Function("For" functionClass:"richTea.std.exports.For" implicitAttributeName:"count" implicitBranchName:"do" {
-		Attribute("count");
-		Attribute("as" defaultValue:"i");
+(:exports {
+	Function("For" functionClass:"richTea.std.exports.For" implicitAttributeName:"count" implicitBranchName:"do" :{
+		Attribute("count")
+		Attribute("as" defaultValue:"i")
 	})
 	
-	Function("ForEach" functionClass:"richTea.std.exports.ForEach" implicitAttributeName:"as" implicitBranchName:"do" {
-		Attribute("in");
-		Attribute("as" defaultValue:"i");
+	Function("ForEach" functionClass:"richTea.std.exports.ForEach" implicitAttributeName:"as" implicitBranchName:"do" :{
+		Attribute("in")
+		Attribute("as" defaultValue:"i")
 	})
 	
-	Function("ForEachAttribute" functionClass:"richTea.std.exports.ForEachAttribute" implicitAttributeName:"as" implicitBranchName:"do" {
-		Attribute("in");
-		Attribute("as" defaultValue:"i");
+	Function("ForEachAttribute" functionClass:"richTea.std.exports.ForEachAttribute" implicitAttributeName:"as" implicitBranchName:"do" :{
+		Attribute("in")
+		Attribute("as" defaultValue:"i")
 	})
 	
-	Function("If" functionClass:"richTea.std.exports.If" implicitAttributeName:"expression" implicitBranchName:"then" {
-		Attribute("expression");
-		Branch("then");
-		Branch("else");
+	Function("If" functionClass:"richTea.std.exports.If" implicitAttributeName:"expression" implicitBranchName:"then" :{
+		Attribute("expression")
+		Branch("then")
+		Branch("else")
 	})
 	
-	Function("Increment" functionClass:"richTea.std.exports.Increment" implicitAttributeName:"attribute" {
+	Function("Increment" functionClass:"richTea.std.exports.Increment" implicitAttributeName:"attribute" :{
 		Attribute("attribute")
 		Attribute("by" defaultValue:1)
 	})
 	
 	Function("Let" functionClass:"richTea.std.exports.Let")
 		
-	Function("Man" functionClass:"richTea.std.exports.Man" implicitAttributeName: "target" {
+	Function("Man" functionClass:"richTea.std.exports.Man" implicitAttributeName: "target" :{
 		Attribute("target")
 	})
 	
-	Function("Map" functionClass:"richTea.std.exports.Map" implicitAttributeName:"input" implicitBranchName:"mapFunction" {
+	Function("Map" functionClass:"richTea.std.exports.Map" implicitAttributeName:"input" implicitBranchName:"mapFunction" :{
 		Attribute("input")
-		Branch("mapFunction");
+		Branch("mapFunction")
 	})
 	
-	Function("Print" functionClass:"richTea.std.exports.Print" implicitAttributeName:"message" {
-		Attribute("message", defaultValue:"");
-		Attribute("prependNewLine" defaultValue:false);
-		Attribute("appendNewLine" defaultValue:true);
+	Function("Print" functionClass:"richTea.std.exports.Print" implicitAttributeName:"message" :{
+		Attribute("message", defaultValue:"")
+		Attribute("prependNewLine" defaultValue:false)
+		Attribute("appendNewLine" defaultValue:true)
 	})
 	
 	Function("ReadFile" functionClass:"richTea.std.exports.ReadFile" implicitAttributeName:"path")
 	
-	Function("Set" functionClass:"richTea.std.exports.Set" implicitAttributeName:"attribute" { 
-		Attribute("attribute");
-		Attribute("to");
+	Function("Set" functionClass:"richTea.std.exports.Set" implicitAttributeName:"attribute" :{ 
+		Attribute("attribute")
+		Attribute("to")
 	})
 		
 	Function("Switch" functionClass:"richTea.std.exports.Switch" implicitAttributeName:"value")
 	
-	Function("SystemExit" functionClass:"richTea.std.exports.SystemExit" implicitAttributeName:"code" {
+	Function("SystemExit" functionClass:"richTea.std.exports.SystemExit" implicitAttributeName:"code" :{
 		Attribute("code" defaultValue:0)
 	})
 	
 	Function("Timer" functionClass:"richTea.std.exports.Timer" implicitBranchName:"block")
 	
-	Function("While" functionClass:"richTea.std.exports.While" implicitAttributeName:"condition" implicitBranchName:"do" {
+	Function("While" functionClass:"richTea.std.exports.While" implicitAttributeName:"condition" implicitBranchName:"do" :{
 		Attribute("condition")
 	})
 	
-	Function("WriteFile" functionClass:"richTea.std.exports.WriteFile" implicitAttributeName:"contents" {
+	Function("WriteFile" functionClass:"richTea.std.exports.WriteFile" implicitAttributeName:"contents" :{
 		Attribute("contents")
 	})
 })
